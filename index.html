@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>After-school Band Club</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="scene">
+
+    <!-- Character -->
+    <img
+        class="character"
+        src="character.webp"
+        alt="Main character"
+    >
+
+    <!-- Top navigation -->
+    <div class="top-ui">
+        <span>♪ Togenashi Togeari</span>
+
+        <div class="top-right">
+            <button id="setlistToggle">SETLIST</button>
+            <span>VISUAL NOVEL</span>
+        </div>
+    </div>
+
+    <!-- Song list -->
+    <div class="song-list" id="songList"></div>
+
+    <!-- PDF viewer -->
+    <div class="pdfwrap" id="pdfWrap">
+        <div class="pdfhead">
+            <strong id="pdfTitle">Music sheet</strong>
+            <button id="closePdf">Close ×</button>
+            <button id="fullscreenPdf">⛶</button>
+        </div>
+
+        <iframe
+            class="pdf"
+            id="pdfFrame"
+            title="Sheet music PDF">
+        </iframe>
+    </div>
+
+    <!-- Dialogue box -->
+    <section class="dialogue">
+
+        <!-- Opening dialogue -->
+        <div class="screen active" id="intro">
+            <div class="name">Awa Subaru</div>
+
+            <div class="line">
+                Hey, wanna do a band together?
+            </div>
+
+            <button class="next" id="next">
+                ⌄
+            </button>
+        </div>
+
+        <!-- Song selection dialogue -->
+        <div class="screen" id="select">
+            <div class="name">Awa Subaru</div>
+
+            <div class="line">
+                What song should we practice?
+            </div>
+
+            <div class="choices" id="choices"></div>
+
+            <button class="next" id="nextSongs">
+                ⌄
+            </button>
+        </div>
+
+        <!-- Selected song dialogue -->
+        <div class="screen" id="chosen">
+            <div class="name">Character</div>
+
+            <div class="line" id="chosenLine">
+                Oh, this one! Let's practice it together.
+            </div>
+
+            <button class="next" id="returnSongs">
+                ⌄
+            </button>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
